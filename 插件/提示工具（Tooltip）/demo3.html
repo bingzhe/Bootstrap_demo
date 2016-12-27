@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+<title>Tooltip</title>
+<!--Bootstrap css-->
+<link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
+<!--jquery-->
+<script src="js/jquery.min.js"></script>
+<!--Bootstrap-->
+<script src="js/bootstrap.min.js"></script>
+</head>
+<body style="padding:100px 100px 10px;">
+<a href="#" class="tooltip-show" data-toggle="tooltip" title="默认的tooltip">默认的tooltip</a>
+
+<script type="text/javascript">
+$(function(){
+  $('.tooltip-show').tooltip();
+  $('.tooltip-show').on('show.bs.tooltip', function(){
+    alert("message on show");
+  });
+  $('.tooltip-show').on('shown.bs.tooltip', function(){
+    alert("message on show2");
+  });
+  $('.tooltip-show').on('hide.bs.tooltip', function(){
+    alert("message on show3");
+  });
+  $('.tooltip-show').on('hidden.bs.tooltip', function(){
+    alert("message on show4");
+  });
+})
+</script>
+</body>
+</html>

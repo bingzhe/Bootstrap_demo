@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+<title>tooltip</title>
+<!--Bootstrap css-->
+<link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
+<!--jquery-->
+<script src="js/jquery.min.js"></script>
+<!--Bootstrap-->
+<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div style="padding:100px 100px 10px;">
+这是一个 <a href="#" class="tooltip-show" data-toggle="tooltip" title="show">tooltip 方法 show</a>
+这是一个 <a href="#" class="tooltip-hide" data-toggle="tooltip" title="hide">tooltip 方法 hide</a>
+这是一个 <a href="#" class="tooltip-destroy" data-toggle="tooltip" title="destroy">tooltip 方法 destrop</a>
+这是一个 <a href="#" class="tooltip-toggle" data-toggle="tooltip" title="toggle">tooltip 方法 toggle</a>
+这是一个 <a href="#" class="tooltip-option" data-toggle="tooltip" title="<h2>Header</h2>">tooltip 方法 option</a>
+
+
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+$(function(){
+  // $("[data-toggle='tooltip']").tooltip();
+  $(".tooltip-show").tooltip("show");
+  $(".tooltip-hide").tooltip("hide");
+  $(".tooltip-destroy").tooltip("destroy");
+  // $(".tooltip-toggle").tooltip("");
+  $(".tooltip-toggle").tooltip("toggle");
+  $(".tooltip-option").tooltip({html: true});
+
+
+});
+
+
+</script>
+</body>
+</html>
