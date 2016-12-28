@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+<title>popover</title>
+<!--Bootstrap css-->
+<link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
+<!--jquery-->
+<script src="js/jquery.min.js"></script>
+<!--Bootstrap-->
+<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container" style="padding:100px 100px 10px;">
+  <button type="button" class="btn btn-primary" title="Popover title"
+  data-container="body" data-toggle="popover" data-content="左侧Popover中的一些内容">
+    左侧的popover
+  </button>
+</div>
+<script type="text/javascript">
+$(function(){
+  $('[data-toggle="popover"]').popover();
+  $('[data-toggle="popover"]').on("show.bs.popover", function(){
+    alert("当显示时警告消息");
+  });
+  $('[data-toggle="popover"]').on("shown.bs.popover", function(){
+    alert("当显示时警告消息1");
+  });
+  $('[data-toggle="popover"]').on("hide.bs.popover", function(){
+    alert("当显示时警告消息2");
+  });
+  $('[data-toggle="popover"]').on("hidden.bs.popover", function(){
+    alert("当显示时警告消息");
+  });
+});
+</script>
+</body>
+</html>

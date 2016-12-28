@@ -11,8 +11,35 @@
 <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="container" >
-  
+<div class="container" style="padding:150px 150px 10px;">
+<button type="button" class="btn btn-primary popover-show" title="Popover title"
+  data-container="body" data-toggle="popover" data-placement="left"
+  data-content="左侧的 popover 中的一些内容 —— show方法">左侧的popover</button>
+<button type="button" class="btn btn-primary popover-hide" title="Popover title"
+  data-container="body" data-toggle="popover" data-placement="top"
+  data-content="顶部的 popover 中的一些内容 —— hide方法">顶部的popover</button>
+<button type="button" class="btn btn-primary popover-destroy" title="Popover title"
+  data-container="body" data-toggle="popover" data-placement="bottom"
+  data-content="底部的 popover 中的一些内容 —— destroy方法">底部的popover</button>
+<button type="button" class="btn btn-primary popover-toggle" title="Popover title"
+  data-container="body" data-toggle="popover" data-placement="right"
+  data-content="右侧的 popover 中的一些内容 —— toggle方法">右侧的popover</button>
+<br><br><br><br><br><br>
+<p class="popover-options">
+  <a href="#" class="btn btn-primary" title="<h2>Title</h2>" data-container="body"
+  data-toggle="popover" data-content="<h4>popover 中的一些方法 —— options方法</h4>"
+  >Popover</a>
+</p>
 </div>
+
+<script type="text/javascript">
+$(function(){
+  $('.popover-show').popover('show');
+  $('.popover-hide').popover('hide');
+  $('.popover-destroy').popover('destroy');
+  $('.popover-toggle').popover('toggle');
+  $(".popover-options a").popover({html:true});
+});
+</script>
 </body>
 </html>
